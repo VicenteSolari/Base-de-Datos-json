@@ -56,8 +56,6 @@ function escribir(bd,registros,datos){
 			//generar estructura json {}: 
 
 			var objeto = JSON.parse('{"empleados":[]}');
-			console.log(datos);
-			console.log(registros);
 			objeto["empleados"].push(datos);
 			var info = JSON.stringify(objeto); 
 
