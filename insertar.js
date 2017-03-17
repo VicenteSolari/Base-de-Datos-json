@@ -13,7 +13,7 @@ return crypto.createHash('sha1').update(current_date + random).digest('hex');
 
 function leer(bd,datos,callback){
 			//variable donde guardaremos nuestros registros del archivo de bd.
-			var info;
+			var registros;
 			fs.readFile(bd+".txt",'utf8', function (err,data) {						
 		  	 if (err) {
 		   		//si el archivo es inexistente:
@@ -23,13 +23,16 @@ function leer(bd,datos,callback){
 		    	else
 		    		console.log("ocurrio un error al acceder al archivo de la base de dato");		    		
 		    }
-		    info=data;
+		   registros=data;
+		   	/*console.log(registros['empleados']);
+		   	registros['empleados'].push(datos);
+		   	console.log(registros['empleados']);
+		   	console.log(registros['empleados'].length);*/
 		    		    //se elimina la , inicial del primer registro insertado, si existe el archivo.
 		    //a mejorar : verificar si es el primero, no ingrese la coma (linea 47).		
-		     			
+		    callback(bd,registros,datos);
 		  });
-
-		callback(bd,info,datos);
+	
 }
 
 /*
@@ -42,7 +45,6 @@ function comparar(bd,registros,datos,callback){
 
 
 function escribir(bd,registros,datos){
-
 	//si llegar por parametros que ya existe, no lo cargamos.
 	if(datos === 'EXISTENTE'){
 		'Ya existe un registro con estos datos'
@@ -54,6 +56,9 @@ function escribir(bd,registros,datos){
 			//generar estructura json {}: 
 
 			var objeto = JSON.parse('{"empleados":[]}');
+			console.log(datos);
+			console.log(registros);
+			return;
 			objeto["empleados"].push(datos);
 			var info = JSON.stringify(objeto); 
 
@@ -71,10 +76,11 @@ function escribir(bd,registros,datos){
 
 		else{
 			//si existe un archivo,cargarlo en base 
-			
-			var objeto = registro[bd].push(datos);
+			var objeto=JSON.parse(registros);
+			objeto[bd].push(datos);
+			console.log(objeto[bd]);
 			var info = JSON.stringify(objeto); 
-
+			console.log(info);
 			fs.writeFile(bd+".txt", info , function(err) {			
 		    if(err) {
 		        return console.log("Error al intentar guardar en el archivo de base de dato " + bd);
@@ -97,18 +103,19 @@ function escribir(bd,registros,datos){
 
 function insertar(bd,datos,callback){
 	//recuperar datos para evaluar repeticion.
-		callback(bd,datos,escribir);		
+		callback(bd,datos,escribir);//el callback es leer		
 }
-
-
 
 //primer parametros base de datos a impactar
 //segundo parametro estructura tipo JSON.
 
+
+
 var hashID = newID();
-var dato = {ID:hashID,nombre:"Jorge",apellido:"WWW",cargo:"ZZZ"};
+var dato = {ID:hashID,nombre:"Juan",apellido:"Lopez",cargo:"CCC"};
 
 insertar('empleados',dato,leer);
+
 
 
 
