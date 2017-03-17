@@ -1,7 +1,7 @@
 Primeros comandos para irnos dando una idea de como puede ser la Base de datos. 
 
 Todo esta sujeto a cambios segun vean conveniente, pero al menos ahora tenemos una base para empezar.
-
+	************* ARREGLADO **************{
 Los archivos txt seguiria la estructura siguiente, JSON con arreglos:
 
 {
@@ -16,7 +16,7 @@ a pesar de ya contenerlo, lo que queda asi:
 }
 
 y da error al parsear el texto de arriba.
-
+	}************* ARREGLADO **************
 El leer es un ejemplo de como recorrer y leer los datos 
 que ya guardamos siguiendo la primera estructura. 
 

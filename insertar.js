@@ -86,6 +86,7 @@ function escribir(bd,registros,datos){
 		        return console.log("Error al intentar guardar en el archivo de base de dato " + bd);
 			    	}
 			    console.log("Se guardo correctamente el registro\n");
+			    //*****************_FALTA DEBUGGEAR_**************
 			    for(key in registros){
 					objeto = registros[key];
 				    for (var propiedad in objeto) {				     
