@@ -84,7 +84,7 @@ function escribir(bd,registros,datos){
 			    	}
 			    console.log("Se guardo correctamente el registro\n");
 			    //*****************_FALTA DEBUGGEAR_**************
-			    for(key in registros){
+			    /*for(key in registros){
 					objeto = registros[key];
 				    for (var propiedad in objeto) {				     
 				        	var interno = objeto[propiedad];
@@ -92,7 +92,7 @@ function escribir(bd,registros,datos){
 				        		console.log(atributo+"->"+interno[atributo]);
 				        	}			  	 		
 				   	 	}
-				   	 }
+				   	 }*/
 					} 
 			)
 		}
@@ -110,12 +110,6 @@ function insertar(bd,datos,callback){
 
 
 var hashID = newID();
-var dato = {ID:hashID,nombre:"Juan",apellido:"Lopez",cargo:"CCC"};
+var dato = {ID:hashID,nombre:"Laura",apellido:"Fernandez",cargo:"Administradora"};
 
 insertar('empleados',dato,leer);
-
-
-
-
-
-
