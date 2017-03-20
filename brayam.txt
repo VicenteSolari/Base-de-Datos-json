@@ -1,0 +1,3 @@
+Fijense que con php puede ser una solucion para hacer el programita ese que dijo el profe es mas sencillo 
+ahi subi unos ejemplos de como crear,guardar y leer un archivo json con php. acurdense de copiar esa carpeta
+en la carpeta htdocs de xamp y de levantar el apache.
