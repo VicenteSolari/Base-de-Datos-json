@@ -1,22 +1,26 @@
 
+<<<<<<< HEAD
 {"Persona"[
 {"Nombre":"Jose":,"Apellido":"Sans","Dni":34567338,"NAcionalidad":"Argentina","Provincia":"San luis"};
-{"Nombre":"Raul":,"Apellido":"Amieva","Dni":38599338,"NAcionalidad":"Argentina","Provincia":"Mendoza"};
+{"Nombre":"Raul":,"Apellido":"Amieva","Dni":83599338,"NAcionalidad":"Argentina","Provincia":"Mendoza"};
 {"Nombre":"Maria":,"Zaes":"Sans","Dni":23457338,"NAcionalidad":"Argentina","Provincia":"Buenos Aires"};
 {"Nombre":"Viviana":,"Rios":"Sans","Dni":38967338,"NAcionalidad":"Argentina","Provincia":"Cordoba"}
+=======
+[
+  {
+    "Dni" : "33987654",
+    "Nombre" : "Javier",
+     "Apellido" : "Morales"
+  },
+  {
+    "Dni" : "23456654",
+    "Nombre" : "Marcela",
+     "Apellido" : "Mora"
+  },
+  {
+    "Dni" : "23457774",
+    "Nombre" : "Mario",
+     "Apellido" : "Suarez"
+    }
+>>>>>>> 9d582abbc9dd8513394923432cffaa644abd07e5
 ]
-}
-{"SucursalBanco"[
-{"IdBanco":10,"Nombre":"Rio":,"Provincia":"San luis"};
-{"IdBanco":11,"Nombre":"Rio":,"Provincia":"Cordoba"};
-{"IdBanco":12,"Nombre":"Rio":,"Provincia":"San Luis"};
-]
-}
-
-{"Trabaja"[
-{"DniEmpleado":34567338:,"IdBanco":10,"Sueldo":33343,};
-{"DniEmpleado":38599338:,"IdBanco":10,"Sueldo":56343,};
-{"DniEmpleado":23457338:,"IdBanco":11,"Sueldo":33343,};
-{"DniEmpleado":38967338:,"IdBanco":12,"Sueldo":33343,};
-]
-}
