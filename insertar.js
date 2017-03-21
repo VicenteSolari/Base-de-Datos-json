@@ -110,6 +110,14 @@ function insertar(bd,datos,callback){
 
 
 var hashID = newID();
-var dato = {ID:hashID,nombre:"Laura",apellido:"Fernandez",cargo:"Administradora"};
-
+var dato = {ID:hashID,nombre:"Pedro",apellido:"Manrique",cargo:"Desarrollador",edad:21};
+//var dato = {ID:hashID,nombre:"Juan",apellido:"Lopez",cargo:"Desarrollador",edad:23};
+/*insertar('empleados',dato,leer);
+var dato = {ID:hashID,nombre:"Laura",apellido:"Fernandez",cargo:"Administradora",edad:35};
+insertar('empleados',dato,leer);
+var dato = {ID:hashID,nombre:"Rosa",apellido:"Ochoa",cargo:"CEO",edad:29};
+insertar('empleados',dato,leer);
+var dato = {ID:hashID,nombre:"Ezequiel",apellido:"Gutierrez",cargo:"CEO",edad:40};
+insertar('empleados',dato,leer);
+var dato = {ID:hashID,nombre:"Pedro",apellido:"Manrique",cargo:"Desarrollador",edad:21};*/
 insertar('empleados',dato,leer);
