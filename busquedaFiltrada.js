@@ -1,9 +1,8 @@
 //AtributoDeFiltrado nombre de una propiedad del JSON
 //valor con el que va a comparar según la comparación
 //comparacion -2 menor o igual, -1 equivale a menor, 0 equivale a igual, 1 equivale a mayor,2 mayor o igual. por ejemplo buscarFiltrado('empleados','edad',2,18) ->busca a los mayores de 18 años
-var fs = require('fs');
+let fs = require('fs');
 function buscarFiltrado(bd,AtributoDeFiltrado,valor,comparacion){
-	var coinciden=false;
 fs.readFile(bd+'.txt','utf-8',function(error,data){
 	if(error) return console.log(error);
 
